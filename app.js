@@ -36,9 +36,11 @@ boxes.forEach((box) => {
     box.addEventListener("click",() => {
         if(turnO){
             box.innerText = "O";
+            box.style.color = "#8809ff";
             turnO = false;
         }else{
-          box.innerText = "X";  
+          box.innerText = "X"; 
+           box.style.color = "#b0413e"; 
            turnO = true;
         }
         box.disabled = true;
@@ -88,9 +90,6 @@ const checkWinner = () => {
     }
     return false;
 };
-
-
-
 
 
 newgameBtn.addEventListener("click", resetGame);
